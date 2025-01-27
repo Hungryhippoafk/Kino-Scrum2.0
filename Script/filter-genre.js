@@ -1,4 +1,4 @@
-const genreDropdown = document.querySelector('.filter-genre__dropdown')
+/*const genreDropdown = document.querySelector('.filter-genre__dropdown')
 
 genreDropdown.addEventListener('change', async function () {
   const movies = await fetchAPI()
@@ -18,3 +18,4 @@ genreDropdown.addEventListener('change', async function () {
   }
 })
 
+*/

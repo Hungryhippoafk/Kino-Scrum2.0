@@ -1,4 +1,4 @@
-document.getElementById('header__children-movies').addEventListener('click', async function () {
+ /*document.getElementById('header__children-movies').addEventListener('click', async function () {
   const movies = await fetchAPI() // Fetch movies
   if (movies) {
     // Filter PG-13 movies
@@ -87,4 +87,4 @@ async function createMovies(movies) {
     errorMessage.innerHTML = 'Error loading movies.'
     movieContainer.appendChild(errorMessage)
   }
-}
+} */

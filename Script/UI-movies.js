@@ -1,4 +1,4 @@
-createMovies()
+/*createMovies()
 
 async function createMovies() {
   try {
@@ -88,4 +88,4 @@ function showModal(movieData) {
   document.querySelector('.movie-modal__close').addEventListener('click', () => {
     modalContainer.classList.remove('active')
   })
-}
+}*/

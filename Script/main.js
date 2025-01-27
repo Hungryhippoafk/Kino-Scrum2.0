@@ -1,4 +1,4 @@
-//Fetch FrontPage Content
+/*//Fetch FrontPage Content
 
 loadFrontPageContent()
 addFrontPageContent()
@@ -98,3 +98,4 @@ document.addEventListener('DOMContentLoaded', () => {
     createMovies()
   })
 })
+  */

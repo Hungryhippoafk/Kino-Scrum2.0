@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
   console.log('sidan visas utan problem')
   const placeholder = document.querySelector('.celebration-modal_rootcontainer')
   if (!placeholder) {
@@ -58,3 +58,4 @@ document.addEventListener('DOMContentLoaded', () => {
   //Display and create modal
   createModal(modalData)
 })
+*/

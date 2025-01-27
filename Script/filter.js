@@ -1,4 +1,4 @@
-// Filtering logic for movie searching on frontpage
+/*// Filtering logic for movie searching on frontpage
 let allMovies = []
 
 function debounce(func, delay) {
@@ -79,3 +79,4 @@ document.querySelector('.search__input').addEventListener('input', (e) => {
     movieContainer.innerHTML = '' //Clearing results
   }
 })
+*/
