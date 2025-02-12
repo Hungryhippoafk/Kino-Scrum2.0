@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Website for a local movie theater",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/server.js",
-    "test": "jest",
+    "start": "node index.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "prepare": "husky install",
     "build-css": "sass src/styles/main.scss dist/styles.css",
     "watch-css": "sass --watch src/styles/main.scss:dist/styles.css"
@@ -37,9 +38,9 @@
   },
   "dependencies": {
     "axios": "^1.7.9",
+    "cross-env": "^7.0.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "node-fetch": "^3.3.2"
-  },
-  "type": "module"
+  }
 }

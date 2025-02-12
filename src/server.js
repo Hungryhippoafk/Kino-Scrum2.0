@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const initApp = () => {
+export default function initApp() {
   const app = express()
   app.set('view engine', 'ejs')
   app.set('views', path.join(__dirname, '../views'))
@@ -50,12 +50,3 @@ const initApp = () => {
 
   return app
 }
-
-const app = initApp()
-
-app.listen(5080, () => {
-  console.log('Server is running on http://localhost:5080')
-})
-
-export default app
-export { initApp }

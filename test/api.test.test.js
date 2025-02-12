@@ -1,25 +1,25 @@
-import { expect, test, jest } from '@jest/globals'
+import { describe, expect, test } from '@jest/globals'
 import request from 'supertest'
 import initApp from '../src/server.js'
 
-jest.mock('../src/server.js')
+describe('/movies', () => {
+  test('movies', async () => {
+    const app = initApp()
 
-test('Movies', async () => {
-  const expectedMovies = [
-    { id: 1, attributes: { title: 'Encanto' } },
-    { id: 2, attributes: { title: 'Forrest Gump' } },
-    { id: 3, attributes: { title: 'Training Day' } },
-  ]
+    const response = await request(app).get('/movies').expect('Content-Type', /html/).expect(200)
 
-  const app = initApp()
-  app.mockResolvedValue(expectedMovies)
+    expect(response.text).toMatch('Encanto')
+    expect(response.text).toMatch('Training Day')
+    expect(response.text).toMatch('Fire Walk With Me')
+  })
+})
 
-  const response = await request(app)
-    .get('https://plankton-app-xhkom.ondigitalocean.app/api/movies ')
-    .expect('Content-Type', /html/)
-    .expect(200)
+describe('/movies/id', () => {
+  test('returns movie Encanto', async () => {
+    const app = initApp()
 
-  expectedMovies.forEach((movie) => {
-    expect(response.text).toMatch(movie.attributes.title)
+    const response = await request(app).get('/movies/2').expect('Content-Type', /html/).expect(200)
+
+    expect(response.text).toMatch('Encanto')
   })
 })
