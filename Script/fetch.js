@@ -1,4 +1,4 @@
-/*fetchAPI()
+fetchAPI()
 
 async function fetchAPI() {
   const url = 'fake-MovieAPI.json'
@@ -15,4 +15,3 @@ async function fetchAPI() {
     console.error(error.message)
   }
 }
-*/

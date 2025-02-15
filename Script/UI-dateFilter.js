@@ -1,7 +1,6 @@
 //FILTER BUTTONS MOBILE
 
-
-/*const moreFiltersBtn = document.querySelector('.mobile__filter-menu')
+const moreFiltersBtn = document.querySelector('.mobile__filter-menu')
 const filterBtnContainer = document.querySelector('.filter-btn__container')
 
 moreFiltersBtn.addEventListener('click', () => {
@@ -211,4 +210,3 @@ async function dateFilter(date) {
     }
   })
 }
-*/

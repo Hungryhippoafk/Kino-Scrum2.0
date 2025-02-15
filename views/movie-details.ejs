@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/movie.css">
+    <link rel="stylesheet" href="public\styles\main.css">
     <title><%= movie.attributes.title %> - Movie Details</title>
 </head>
 <body>
     <h1><%= movie.attributes.title %></h1>
-    <% if (movie.attributes.image && movie.attributes.image && movie.attributes.image.url) { %>
+    <% if (movie.attributes.image && movie.attributes.image.url) { %>
         <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>" class="movie-image" />
     <% } else { %>
         <p>No image available</p>

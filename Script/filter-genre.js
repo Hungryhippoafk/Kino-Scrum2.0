@@ -1,4 +1,4 @@
-/*const genreDropdown = document.querySelector('.filter-genre__dropdown')
+const genreDropdown = document.querySelector('.filter-genre__dropdown')
 
 genreDropdown.addEventListener('change', async function () {
   const movies = await fetchAPI()
@@ -11,11 +11,8 @@ genreDropdown.addEventListener('change', async function () {
   for (let i = 0; i < movies.length; i++) {
     if (!movies[i].genres.includes(genreDropdown.value) && genreDropdown.value !== 'all') {
       movieDiv[i].style.display = 'none'
-    } 
-    else {
+    } else {
       movieDiv[i].style.display = ''
     }
   }
 })
-
-*/

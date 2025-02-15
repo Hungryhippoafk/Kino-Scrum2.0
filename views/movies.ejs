@@ -9,24 +9,23 @@
 <body>
     <h1>Movies</h1>
 
-    <% if (movies.length === 0) { %>
-        <p>No movies available.</p>
-    <% } else { %>
+    <% if (movies.length) { %>
         <ul>
-            <% movies.forEach((movie) => { %>
-              <li class="movie-card">
-                <h2><%= movie.attributes.title %></h2>
-                <% if (movie.attributes.image && movie.attributes.image.url) { %>
-                  <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>" class="movie-image" />
-                <% } else { %>
-                  <div class="movie-image-placeholder">No Image Available</div>
-                <% } %>
-                <p><%= movie.attributes.intro %></p>
-                <a href="/movies/<%= movie.id %>" class="movie-details-button">See Details</a>
-              </li>
-            <% }); %>
-          </ul>
-          
+            <% movies.forEach(movie => { %>
+                <li class="movie-card">
+                    <h2><%= movie.attributes.title %></h2>
+                    <% if (movie.attributes.image.url) { %>
+                        <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>" class="movie-image" />
+                    <% } else { %>
+                        <div class="movie-image-placeholder">No Image Available</div>
+                    <% } %>
+                    <p><%= movie.attributes.intro %></p>
+                    <a href="/movies/<%= movie.id %>" class="movie-details-button">See Details</a>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No movies available.</p>
     <% } %>
 
     <p><a href="/">Back to Home</a></p>
