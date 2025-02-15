@@ -453,88 +453,120 @@ li.menu-active {
 
 .movie__wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
   padding: 20px;
+  justify-items: center;
 }
 
-/* Style for individual movie cards */
 .movie {
-  background-color: #012840;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 220px;
+  text-align: center;
 }
+
+.movie img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ccc;
+}
+
+.movie h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #134777;
+  padding: 10px;
+  margin: 0;
+}
+
+.movie p {
+  padding: 10px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
 .movie a {
   text-decoration: none;
-}
-
-.movie__image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.movie__content {
-  padding: 15px;
-  text-align: center;
-}
-
-.movie__title {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-/* Additional movie details styling */
-.movie__runtime,
-.movie__description,
-.movie__genres {
-  font-size: 0.9rem;
-  color: #e0dfdf;
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-
-.movie__age-limit {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 0.9rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  opacity: 0.7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  color: inherit;
 }
 
 .movie:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.movie__wrapper a {
+  display: block;
+}
+/* Movie image styling */
+.movie-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.movie-image-placeholder {
+  background-color: #f0f0f0;
+  color: #888;
+  padding: 15px;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+/* Movie description */
+p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* Links styling */
+a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container for the movie details */
+.movie-details-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the back links */
+p a {
+  font-size: 1rem;
+  margin-top: 20px;
+  display: inline-block;
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .movie__wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
   }
 }
+
 @media (max-width: 768px) {
   .movie__wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* One column on small screens */
   }
 }
+
 .movie__container {
   display: block;
   width: 50%;
@@ -873,10 +905,12 @@ textarea:focus {
 }
 
 body {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
+  background-image: url('/assets/images/backgrounds/background_main.webp');
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  margin: 0; 
+  padding: 0; 
 }
 
 header,
@@ -890,7 +924,7 @@ footer {
 }
 
 main {
-  color: #000000;
+  color: #ffffff;
   background-color: #ffffff;
   padding: 0px 20px 0px 20px;
 }
@@ -948,4 +982,134 @@ footer {
   display: flex;
 }
 
-/*# sourceMappingURL=styles.css.map */
+
+.movie-details-page .movie-details-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;  
+  
+  width: 35%;  
+  margin: 5px auto;  
+  text-align: center;
+}
+
+.movie-details-page .movie-title {
+  font-size: 1.2rem;  
+  font-weight: bold;
+  margin-bottom: 8px;  
+  color: #333;
+}
+
+.movie-details-page .movie-image {
+  max-width: 70%; 
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;  
+}
+
+.movie-details-page .movie-image-placeholder {
+  background-color: #ddd;
+  padding: 10px;  
+  font-size: 0.7rem;  
+  color: #777;
+  border-radius: 8px;
+  margin-bottom: 8px;  
+}
+
+.movie-details-page .movie-description {
+  font-size: 0.8rem; 
+  color: #555;
+  line-height: 1.3;
+  margin-bottom: 10px;  
+}
+
+.movie-details-page .movie-links p {
+  font-size: 0.7rem;  
+  margin: 3px 0;  
+}
+
+.movie-details-page .movie-links a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.movie-details-page .movie-links a:hover {
+  color: #0056b3;
+}
+
+
+@media (min-width: 768px) {
+  .movie-details-page .movie-details-wrapper {
+      padding: 10px;  
+      max-width: 400px;  
+      margin-top: 5px;  
+  }
+
+  .movie-details-page .movie-title {
+      font-size: 1.4rem;  
+  }
+
+  .movie-details-page .movie-description {
+      font-size: 0.9rem;  
+  }
+
+  .movie-details-page .movie-links p {
+      font-size: 0.8rem;  
+  }
+}
+.footer__social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer__social-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer__social a {
+  margin: 0 15px; 
+  color: #fff;
+  font-size: 2rem; 
+  transition: color 0.3s ease-in-out;
+}
+
+.footer__social a:hover {
+  color: #ddd; 
+}
+
+.footer__social i {
+  width: 40px; 
+  height: 40px; 
+  line-height: 40px; 
+  text-align: center;
+  border-radius: 50%; 
+  background-color: #333; 
+}
+
+.footer__social a:hover i {
+  background-color: #007bff; 
+}
+
+
+.footer__social-facebook a:hover i {
+  background-color: #3b5998; 
+}
+.footer__social-twitter a:hover i {
+  background-color: #00acee; 
+}
+.footer__social-instagram a:hover i {
+  background-color: #e4405f; 
+}
+.footer__social-youtube a:hover i {
+  background-color: #ff0000; 
+}
+.footer__social-linkedin a:hover i {
+  background-color: #0077b5; 
+}
+
+

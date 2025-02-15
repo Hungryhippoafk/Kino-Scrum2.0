@@ -13,13 +13,13 @@
         <ul>
             <% movies.forEach(movie => { %>
                 <li class="movie-card">
-                    <h2><%= movie.attributes.title %></h2>
+                    <h2 class = "movie__title"><%= movie.attributes.title %></h2>
                     <% if (movie.attributes.image.url) { %>
                         <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>" class="movie-image" />
                     <% } else { %>
                         <div class="movie-image-placeholder">No Image Available</div>
                     <% } %>
-                    <p><%= movie.attributes.intro %></p>
+                    <p class="movie_description"><%= movie.attributes.intro %></p>
                     <a href="/movies/<%= movie.id %>" class="movie-details-button">See Details</a>
                 </li>
             <% }) %>

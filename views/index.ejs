@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/movies.css">
+    
     
     <title><%= title %></title>
 </head>
@@ -52,15 +52,18 @@
             <% if (movies && movies.length) { %>
                 <% movies.forEach(movie => { %>
                     <div class="movie">
-                        <h2><%= movie.attributes.title %></h2>
-                        <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>">
-                        <p><%= movie.attributes.intro %></p>
+                        <a href="/movies/<%= movie.id %>">
+                            <h2><%= movie.attributes.title %></h2>
+                            <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>">
+                            <p><%= movie.attributes.intro %></p>
+                        </a>
                     </div>
                 <% }) %>
             <% } else { %>
                 <p>No movies available.</p>
             <% } %>
         </div>
+        
         <div class="filter-btn__container">
             <button class="filter-btn__show-less" type="button">Show Less</button>
             <button class="filter-btn__show-all" type="button">Show All</button>
