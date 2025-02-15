@@ -464,7 +464,9 @@ li.menu-active {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   width: 100%;
   max-width: 220px;
   text-align: center;
@@ -529,7 +531,7 @@ p {
 
 /* Links styling */
 a {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -906,11 +908,11 @@ textarea:focus {
 
 body {
   background-image: url('/assets/images/backgrounds/background_main.webp');
-  background-size: cover; 
-  background-position: center; 
-  background-attachment: fixed; 
-  margin: 0; 
-  padding: 0; 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 header,
@@ -982,56 +984,55 @@ footer {
   display: flex;
 }
 
-
 .movie-details-page .movie-details-wrapper {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 5px;  
-  
-  width: 35%;  
-  margin: 5px auto;  
+  padding: 5px;
+
+  width: 35%;
+  margin: 5px auto;
   text-align: center;
 }
 
 .movie-details-page .movie-title {
-  font-size: 1.2rem;  
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 8px;  
+  margin-bottom: 8px;
   color: #333;
 }
 
 .movie-details-page .movie-image {
-  max-width: 70%; 
+  max-width: 70%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 8px;  
+  margin-bottom: 8px;
 }
 
 .movie-details-page .movie-image-placeholder {
   background-color: #ddd;
-  padding: 10px;  
-  font-size: 0.7rem;  
+  padding: 10px;
+  font-size: 0.7rem;
   color: #777;
   border-radius: 8px;
-  margin-bottom: 8px;  
+  margin-bottom: 8px;
 }
 
 .movie-details-page .movie-description {
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
   color: #555;
   line-height: 1.3;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 
 .movie-details-page .movie-links p {
-  font-size: 0.7rem;  
-  margin: 3px 0;  
+  font-size: 0.7rem;
+  margin: 3px 0;
 }
 
 .movie-details-page .movie-links a {
   text-decoration: none;
-  color: #007BFF;
+  color: #007bff;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -1040,24 +1041,23 @@ footer {
   color: #0056b3;
 }
 
-
 @media (min-width: 768px) {
   .movie-details-page .movie-details-wrapper {
-      padding: 10px;  
-      max-width: 400px;  
-      margin-top: 5px;  
+    padding: 10px;
+    max-width: 400px;
+    margin-top: 5px;
   }
 
   .movie-details-page .movie-title {
-      font-size: 1.4rem;  
+    font-size: 1.4rem;
   }
 
   .movie-details-page .movie-description {
-      font-size: 0.9rem;  
+    font-size: 0.9rem;
   }
 
   .movie-details-page .movie-links p {
-      font-size: 0.8rem;  
+    font-size: 0.8rem;
   }
 }
 .footer__social {
@@ -1072,44 +1072,41 @@ footer {
 }
 
 .footer__social a {
-  margin: 0 15px; 
+  margin: 0 15px;
   color: #fff;
-  font-size: 2rem; 
+  font-size: 2rem;
   transition: color 0.3s ease-in-out;
 }
 
 .footer__social a:hover {
-  color: #ddd; 
+  color: #ddd;
 }
 
 .footer__social i {
-  width: 40px; 
-  height: 40px; 
-  line-height: 40px; 
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-  border-radius: 50%; 
-  background-color: #333; 
+  border-radius: 50%;
+  background-color: #333;
 }
 
 .footer__social a:hover i {
-  background-color: #007bff; 
+  background-color: #007bff;
 }
-
 
 .footer__social-facebook a:hover i {
-  background-color: #3b5998; 
+  background-color: #3b5998;
 }
 .footer__social-twitter a:hover i {
-  background-color: #00acee; 
+  background-color: #00acee;
 }
 .footer__social-instagram a:hover i {
-  background-color: #e4405f; 
+  background-color: #e4405f;
 }
 .footer__social-youtube a:hover i {
-  background-color: #ff0000; 
+  background-color: #ff0000;
 }
 .footer__social-linkedin a:hover i {
-  background-color: #0077b5; 
+  background-color: #0077b5;
 }
-
-
